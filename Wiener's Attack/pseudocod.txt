@@ -1,0 +1,39 @@
+Input: mod_N, exp_pub
+
+d_max = calcular_d_max(mod_N, exp_pub)
+
+p = exp_pub
+q = mod_N
+i = 1
+
+while q != 0 do
+    convergente_i = calcular_convergente(i)
+    numerador_i = numerador(convergente_i)
+    denominador_i = denominador(convergente_i)
+
+    phi = (exp_pub * denominador_i - 1) / numerador_i
+    x = (mod_N - phi + 1) / 2
+    y = sqrt(x * x - mod_N)
+
+    if phi é inteiro and x é inteiro and y é inteiro then
+        primo1 = x - y
+        primo2 = x + y
+        exp_privado = denominador(convergente_i)
+        Output: "(p, q, d): " primo1, primo2, exp_privado
+        break
+    end if
+    
+    if denominador_i > d_max then
+        Output: "Ataque Ineficiente"
+        break
+    end if
+
+    i = i + 1
+    auxiliar = p mod q
+    p = q
+    q = auxiliar
+end while
+
+if q == 0 then
+    Output: "Ataque Ineficiente"
+end if
