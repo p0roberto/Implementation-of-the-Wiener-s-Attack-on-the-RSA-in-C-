@@ -1,4 +1,4 @@
-#include "functions_wiener.h"
+#include "functions_wiener.hpp"
 
 int main(){
     ull mod_N; // Módulo N, produto entre os dois primos

@@ -1,7 +1,9 @@
 #ifndef FUNCTIONS_WIENER
 #define FUNCTIONS_WIENER
+
 #include <bits/stdc++.h>
 using namespace std;
+
 #define ull unsigned long long
 #define ld long double
 
@@ -74,4 +76,4 @@ void chaveprivada(vector<pair<ull, ull>>& convergentes, ull iesimo, ull exp_pub,
     cout << "(p, q, d) = " << "(" << p << ", " <<  q << ", " << convergentes[iesimo].second << ")\n";
 }
 
-#endif FUNCTIONS_WIENER
+#endif
