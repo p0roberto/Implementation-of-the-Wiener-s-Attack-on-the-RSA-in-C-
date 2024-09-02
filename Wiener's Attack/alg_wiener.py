@@ -1,9 +1,5 @@
 import math
 
-def inteiro(num: int) -> bool:
-    # Verifica se determinado valor é inteiro
-    return num == int(num)
-
 def int_root(x: int, n: int) -> int:
     # Calcula a raiz n-ésima inteira de x usando busca binária
     low, high = 1, x
