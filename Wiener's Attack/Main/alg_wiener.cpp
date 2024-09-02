@@ -20,9 +20,9 @@ int main(){
     vector<pair<ull, ull>> convergentes; // armazena os convergentes pi/qi da fração continua de e/N
     vector<ull> indices; // Armazena os índices da fração contínua e/N
 
-    cout << "Digite o valor de N: ";
+    cout << "\nDigite o valor de N: ";
     cin >> mod_N;
-    cout << "Digite o valor do expoente publico: ";
+    cout << "\nDigite o valor do expoente publico: ";
     cin >> exp_pub;
 
     ull dmax = (d_max(mod_N));
@@ -52,7 +52,7 @@ int main(){
             if(inteiro(phi) && inteiro(x) && inteiro(y)){
                 ull p = x - y;
                 ull q = x + y;
-                cout << "(p, q, d) = " << "(" << p << ", " <<  q << ", " << convergentes[iesimo].second << ")\n";
+                cout << "\n(p, q, d) = " << "(" << p << ", " <<  q << ", " << convergentes[iesimo].second << ")\n";
                 break;
             }
             if(convergentes[iesimo].second > dmax){
